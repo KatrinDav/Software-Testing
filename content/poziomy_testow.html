@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Poziomy testów</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style2.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id=mainPage>
+		<header class="nav">
+			<a href="../index.html">
+				<div id="icon">
+					<i class="fas fa-bug fa-2x"></i></div>
+				<h1><span>Software</span> testing </h1>
+			</a>
+
+			<div class="burger" id="ico"><span></span> <span></span> <span></span> </div>
+
+
+		</header>
+
+		<div id="myNav" class="overlay">
+			<i class="fas fa-long-arrow-alt-up fa-2x" id="arrow" onclick="closeNav()"></i>
+
+			<div class="overlay-content">
+				<a href="../index.html">Strona główna</a>
+				<a href="about.html">O projekcie</a>
+				<a href="podstawowe_zagadnienia.html">Podstawowe zagadnienia</a>
+				<a href="modele.html">Modele</a>
+				<a href="metodyki_zwinne.html">Metodyki zwinne</a>
+				<a href="testowanie.html">Testowanie</a>
+				<a href="poziomy_testow.html">Poziomy testów</a>
+				<a href="typyTechniki.html">Typy i techniki testów</a>
+			</div>
+
+		</div>
+
+
+		<div class="content">
+
+			<div class="ikonka" style="color:#672E3B"><i class="fas fa-list-ul fa-8x"></i></div>
+			<div class="intro">
+				<h2>Poziomy testów</h2>
+			</div>
+
+
+			<div class="opis">
+				<p>Źródłem podziału testów, weryfikujących prawidłowość działania oprogramowania, na poziomy jest tzw. <strong>Model
+						V</strong>, w którym poziomy testów odpowiadają poszczególnych etapom wytwarzania oprogramowania. Model V
+					prezentuje poniższa grafika:</p>
+
+
+				<figure><img src="../img/image8.png" alt="obrazek8"></figure>
+				<figcaption>Rysunek 8 Model V <br />
+					źródło: Linz T. Testowanie w procesie Scrum, Wyd. APN Promise, Warszawa 2014</figcaption>
+
+				<p>Powyższy podział wyodrębnia poziomy abstrakcji systemu w tradycyjnym modelu wytwarzania oprogramowania. Lewa
+					strona grafiki przedstawia zestawienie wymagań, które produkt ma spełniać, formułowanych od ogólnych założeń
+					(wymagania biznesowe) aż do szczegółów definiujących poszczególne funkcjonalności (specyfikacja składników).
+					Każdemu poziomowi wymagań odpowiada dany poziom testów (prawa strona diagramu). Pojęcie poziomu testów definiowane
+					jest jako grupa czynności testowych razem zarządzanych i zorganizowanych, powiązanych z poziomami
+					odpowiedzialności w projekcie. W metodyce scrum, stanowiącym adaptacyjne podejście do wytwarzania oprogramowania,
+					wszystkie wyróżnione poziomy abstrakcji i wszystkie poziomy testowania zawarte są jednocześnie podczas
+					pojedynczego sprintu. Odnoszące się do poszczególnych poziomów abstrakcji systemu testy: </p>
+				<ul>
+					<li>jednostkowe, </li>
+					<li>integracyjne, </li>
+					<li>systemowe </li>
+					<li>adaptacyjne </li>
+				</ul>
+				<p>nie są jednak wykonywane sekwencyjnie, ale równolegle do siebie.</p>
+				<p>Oprócz tych poziomów testów, wyróżnia się jeszcze dodatkowe poziomy testów:</p>
+				<ul>
+					<li>produkcyjnych </li>
+					<li>zgodności z umową </li>
+					<li>zgodności legislacyjnej</li>
+					<li>alfa </li>
+					<li>beta.</li>
+				</ul>
+				<p>Zaznaczenia wymaga, że poziomy testów odnoszą się do etapu, na którym znajduje się proces tworzenia
+					systemu/modułu, natomiast typ testu dotyczy wybranego zbioru technik ze względu na cel testowania. Różne typy
+					testów mogą zostać przeprowadzone na dowolnych poziomach testowania, w zależności od przyjętej strategii i planu
+					testów. </p>
+
+
+
+			</div>
+
+			<div class="ikonka" style="color:#672E3B;"><i class="fas fa-list-ul fa-7x"></i></div>
+			<div class="intro">
+				<h2>Testy jednostkowe i integracyjne</h2>
+			</div>
+
+			<div class="opis">
+				<p>Celem realizacji <strong>testów jednostkowych</strong> jest weryfikacja działania pojedynczego składnika
+					oprogramowania poprzez wykonanie testów dynamicznych, czyli uruchamiających obiekty i wykonujących tym samym kod
+					programu, napisany w środowisku programowania zorientowanym obiektowo. Na tym poziomie testowaniu podlega
+					pojedyncza instancja klasy, czyli obiekt, pojedyncza funkcja, którą traktuje się jako niezależny element systemu,
+					testując w izolacji od pozostałych składników. Wykrycie błędu podczas testowania jednostkowego będzie wskazywać,
+					że źródłem nieprawidłowości jest weryfikowany fragment kodu, a nie elementy zewnętrzne. W przypadku, gdy działanie
+					testowanego składnika zależy od innego elementu systemu, który nie został jeszcze stworzony (np. testowany
+					składnik wywołuje funkcję z innej klasy lub sam jest wywoływany przez inną klasę), tworzone jest środowisko
+					testowe, zwane jarzmem testowym. Składa się ono z brakujących elementów (zwanych zaślepkami i sterownikami),
+					niezbędnych do przetestowania danych składników systemu. Testy jednostkowe wykonywane są zazwyczaj przez
+					programistów, tworzących kod.</p>
+
+				<p><strong>Testowanie integracyjne</strong> pozwala zweryfikować współdziałanie dwóch różnych składników systemu.
+					Testy te są przeprowadzane w celu wykrycia ewentualnych błędów w zintegrowanych ze sobą składnikach wytworzonego
+					oprogramowania (np. działanie metod w dwóch klasach). Zidentyfikowane na poziomie testów integracyjnych błędy
+					związane są z przekazywaniem danych pomiędzy zintegrowanymi składnikami, i obejmują usterki dotyczące: czasu
+					wymiany informacji, przepustowości, wydajności oraz transmisji informacji. Występowanie błędów integracyjnych jest
+					dość powszechne w zwinnych metodykach wytwarzania oprogramowania z uwagi na wprowadzane do kodu zmiany oraz
+					tworzenie nowego kodu w każdej iteracji. Ilość wykonanych testów integracyjnych uzależniona jest od istniejących
+					pomiędzy składnikami systemu zależności, wynikających z przyjętej architektury tworzonego systemu. Zależności te
+					mogą występować zarówno bezpośrednio pomiędzy badanymi obiektami, jak i mieć charakter pośredni (zależność
+					pośrednia polega na wykorzystaniu przed jeden składnik systemu danych pobranych i zapisanych przez drugi ze
+					składników we wspólnym zasobie). Z uwagi na przyrostowy charakter metodyki scrum, powodujący tworzenie nowych
+					funkcjonalności w kolejnych sprintach, zaangażowanie w przeprowadzanie testów integracyjnych ma duże znaczenie. W
+					tej metodzie tworzenia oprogramowania stosowany jest proces ciągłej integracji. Integracja przyrostowa polega na
+					dodawaniu poszczególnych kodów systemu do już istniejących składników zaraz po jego napisaniu. Rozbudowany kod,
+					powiększony o napisane klasy jest każdorazowo poddawany testowaniu. Testowanie integracyjne odbywa się nie tylko
+					na poziomie najmniejszych składników systemu, tj. poszczególnych klas, ale również na poziomie podsystemów i
+					systemów. Zależnie od tego, współdziałanie pomiędzy jakimi typami elementów systemu ma zostać przetestowane,
+					wyróżnia się testy o małej bądź dużej skali integracji. Jeżeli testom poddawane są zintegrowane klasy czy funkcje,
+					mamy do czynienia z testami małej skali. W przypadku, gdy weryfikowane jest współdziałanie np. całych programów,
+					czy podsystemów – odbywają się testy dużej integracji. </p>
+
+			</div>
+
+			<div class="ikonka" style="color:#672E3B"><i class="fas fa-list-ul fa-6x"></i></div>
+			<div class="intro">
+				<h2>Testy systemowe</h2>
+			</div>
+
+			<div class="opis">
+				<p><strong>Testy systemowe</strong> przeprowadzane są po zakończeniu integracji poszczególnych elementów systemu w
+					jedną, spójną całość. Na tym poziomie celem testowania jest zweryfikowanie działania systemu z punktu widzenia
+					użytkownika w zakresie wszystkich przewidzianych funkcjonalności oraz zgodności z wymaganiami. Testy systemowe
+					przeprowadzana są przy zastosowaniu czarnoskrzynkowych metod testowania – tj. bez analizy kodu źródłowego. Na tym
+					poziomie przeprowadza się również testy niefunkcjonalne, pozwalające na określenie sposobu działania systemu,
+					czyli testy wydajności, bezpieczeństwa, niezawodności, użyteczności. Czynności testerskie zrealizowane w oparciu o
+					wymagania systemowe, określone przypadki użycia oraz specyfikację procesów biznesowych, pozwalają ocenić, w jakim
+					stopniu wytworzony system odpowiada celom zdefiniowanym w projekcie. Przy wykonywaniu testów systemowych duże
+					znaczenie odgrywa środowisko produkcyjne w jakim system działa (tj. sprzęt i oprogramowanie) – ważne jest, aby
+					środowisko testowe, w jak najszerszym zakresie odpowiadało docelowemu realnemu środowisku, w którym system będzie
+					funkcjonował. W procesie scrum testy systemowe są przeprowadzana na zakończenie każdego sprintu – zgodnie z
+					założeniem, że wynikiem prac każdego sprintu jest działający produkt. Dlatego też już podczas wczesnych sprintów
+					konieczne jest skonfigurowanie środowiska testowego w sposób przybliżający realne środowisko systemu. Tylko
+					wówczas otrzymane wyniki testów będą miarodajne. Testy systemowe określane są niekiedy mianem testów przekrojowych
+					z uwagi na fakt, że testowanie na tym poziomie często wiąże się z wywołaniem przepływu danych w całym systemie.
+				</p>
+
+				<p>W przeciwieństwie do testów jednostkowych i integracyjnych, testowanie systemowe nie ma charakteru w pełni
+					automatycznego. Testy te, co do zasady, przeprowadzane są ręcznie przez zespół testerski. Wyróżnić można dwa
+					podejścia do testowania ręcznego w zwinnym wytwarzaniu oprogramowania: testowanie badawcze i testowanie oparte na
+					sesjach. W testowaniu badawczym proces weryfikacji poprzedzony jest wybraniem przez testera funkcji lub
+					scenariusza, który ma zostać przetestowany. Nie określa się z góry kroków i struktury testu; dopiero podczas
+					obserwacji zachowania systemu wybierane są ścieżki testowania. Testy rozszerzane są w odniesieniu do tych funkcji,
+					które powodują zachowania systemu odmienne od oczekiwań testera. W adaptacyjnym wytwarzaniu oprogramowania ten
+					sposób testowania jest wykorzystywany do weryfikacji nowych funkcjonalności. Testowanie oparte na sesjach
+					charakteryzuje się pewnym formalizmem, polegającym na opisywaniu celu testów, szczegółów ich przebiegu,
+					weryfikowanych funkcji i elementów systemu oraz zidentyfikowanych usterek w arkuszu sesji. Zakłada się, że jedna
+					sesja testowa, obejmująca przygotowanie, projekt, przeprowadzenie testów, zidentyfikowanie błędów oraz miejsca ich
+					wystąpienia, powinna trwać do 90 minut. Z uwagi na czasochłonność przeprowadzania testów ręcznych, szczególnie
+					przy tworzeniu bardziej skomplikowanych systemów, zamiast testowania systemowego w poszczególnych sprintach,
+					stosuje się strategię testowania systemowego non – stop. Strategia ta opiera się na automatyzowaniu testów
+					systemowych, podobnie jak ma to miejsce przy testach jednostkowych i integracyjnych. Oznacza to, że wraz z
+					tworzeniem nowych funkcji, pisane są do nich testy automatyczne, wykonywane podczas nocnego budowania systemu. </p>
+
+			</div>
+
+			<div class="ikonka" style="color:#672E3B"><i class="fas fa-list-ul fa-5x"></i></div>
+			<div class="intro">
+				<h2>Testy akceptacyjne</h2>
+			</div>
+			<div class="opis">
+				<p><strong>Testowanie akceptacyjne</strong> w kaskadowym modelu wytwarzania oprogramowania przeprowadzane jest
+					przez użytkownika końcowego – klienta, dla którego system został stworzony, w celu ustalenia, czy produkt może
+					zostać przyjęty do użytku. Jest ono formą walidacji, potwierdzającą, czy dostarczony system jest tym, którego
+					oczekiwano i czy spełnia przyjęte kryteria. Celem testów akceptacyjnych nie jest więc wykrywanie nowych usterek,
+					choć mogą one wystąpić również na tym poziomie testów. Weryfikacji podlegają aspekty funkcjonalne i
+					niefunkcjonalne produktu. W przypadku wykonywania testów przez użytkowników końcowych podkreśla się znaczenie
+					jakości informacji zwrotnej od klienta o stwierdzonych nieprawidłowościach. W metodyce scrum rolę klienta
+					przyjmuje właściciel produktu, który wraz z zespołem przygotowuje kryteria akceptacyjne dla każdej
+					funkcjonalności. W trakcie sprintu funkcjonalności te są testowane zarówno automatycznie jak i ręcznie, a w
+					praktyce testowanie akceptacyjne odnosi się do nowo wytworzonych lub zmodyfikowanych elementów systemu. </p>
+
+				<p>W zależności od przyjętej metodologii, pozostałe poziomy testów – tj. produkcyjne, zgodności z umową, zgodności
+					legislacyjnej, alfa oraz beta – klasyfikowane są jako odrębne poziomy bądź jako odmiany testowania akceptacyjnego.
+				</p>
+			</div>
+
+
+			<div class="ikonka" style="color:#672E3B"><i class="fas fa-list-ul fa-4x"></i></div>
+			<div class="intro">
+				<h2>Testy produkcyjne, zgodności,<br /> alfa i beta</h2>
+			</div>
+			<div class="opis">
+				<p>Celem <strong>testów produkcyjnych</strong> jest zaakceptowanie produktu przez administratorów oraz ocena
+					działania systemu w docelowym środowisku produkcyjnym. W trakcie tych testów weryfikacji podlega: tworzenie kopii
+					zapasowych systemu, uruchamianie systemu po awarii oraz zarządzanie użytkownikami. </p>
+
+				<p>Za pomocą <strong>testów zgodności z umową</strong> dokonywana jest ocena systemu w oparciu
+					o uzgodnienia i wymagania określone w kontrakcie zawartym pomiędzy klientem a firmą, która wytworzyła zamówiony
+					system. Testy te mogą być przeprowadzane przez producentów jak i użytkowników. Ich zakończenie powinno nastąpić w
+					formie zaakceptowanego przez strony kontraktu raportu, potwierdzającego realizację warunków umowy. W przypadku,
+					gdy funkcjonalności systemu dotyczą obszaru, który jest uregulowany przepisami prawnymi, ostateczna jego
+					akceptacja jest dokonywana po przeprowadzeniu <strong>testów zgodności legislacyjnej</strong>. </p>
+
+				<p><strong>Testy alfa</strong> są przeprowadzanymi u producenta testami akceptacyjnymi. Wykonywane są albo przez
+					użytkowników końcowych albo przez niezależny zespół testerski w środowisku testowym. Gdy testowanie odbywa się u
+					klienta, poza środowiskiem produkcyjnym, mówimy o <strong>testowaniu beta</strong>. Testy na tym poziomie
+					pozwalając ocenić użytkownikowi końcowego, czy dostarczony system odpowiada wymaganiom wynikającym z istniejących
+					procesów biznesowych. Wyniki tych testów mogą zostać uwzględnione przez producenta przy pomiarze jakości
+					zastosowanego procesu wytwarzania oprogramowania, ponieważ są to błędy, które wystąpiły po wydaniu produktu do
+					użytkowania.</p>
+
+
+
+			</div>
+
+			<a href="testowanie.html">
+				<div id="poprzedni">
+					<< Poprzednie </div> </a> <a href="typyTechniki.html">
+						<div id="next">Następne >> </div>
+			</a>
+
+		</div>
+	</div>
+
+	</div>
+	<footer>
+		<span>Software testing - kompedium wiedzy &copy; 2018.</span> Katrin Dav{}
+	</footer>
+
+	</script>
+	<script src="../script/script.js"></script>
+
+</body>
+
+</html>

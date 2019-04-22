@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Testowanie w procesie tworzenia oprogramowania</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style2.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id=mainPage>
+		<header class="nav">
+			<a href="../index.html">
+				<div id="icon">
+					<i class="fas fa-bug fa-2x"></i></div>
+				<h1><span>Software</span> testing </h1>
+			</a>
+
+			<div class="burger" id="ico"><span></span> <span></span> <span></span> </div>
+
+		</header>
+
+		<div id="myNav" class="overlay">
+			<i class="fas fa-long-arrow-alt-up fa-2x" id="arrow" onclick="closeNav()"></i>
+
+			<div class="overlay-content">
+				<a href="../index.html">Strona główna</a>
+				<a href="about.html">O projekcie</a>
+				<a href="podstawowe_zagadnienia.html">Podstawowe zagadnienia</a>
+				<a href="modele.html">Modele</a>
+				<a href="metodyki_zwinne.html">Metodyki zwinne</a>
+				<a href="testowanie.html">Testowanie</a>
+				<a href="poziomy_testow.html">Poziomy testów</a>
+				<a href="typyTechniki.html">Typy i techniki testów</a>
+			</div>
+
+		</div>
+
+
+		<div class="content">
+
+			<div class="ikonka" style="color:#DC4C46"><i class="fas fa-search fa-8x"></i></div>
+			<div class="intro">
+				<h2>Rola testowania w procesie<br /> wytwarzania oprogramowania</h2>
+			</div>
+
+			<div class="opis">
+
+				<p>Testowanie jest tym etapem procesu tworzenia oprogramowania, który
+					w największym stopniu odpowiada za jakość końcowego produktu, niezależnie od modelu,
+					w oparciu o który oprogramowanie jest wytwarzane. Wzrost jakości następuje wskutek naprawy błędów
+					zidentyfikowanych podczas wykonywania testów. Oznacza to, że im więcej usterek, niezgodności i
+					błędów zostanie
+					odnalezionych na tym etapie, tym jakość oprogramowania będzie wyższa. <strong>Celem
+						testowania</strong> jest więc
+					zaprojektowanie i wykonanie takich testów, które pozwolą wykryć jak największą ilość błędów, przy
+					czym zakończenie
+					prac testowych nie jest równoznaczne ze stwierdzeniem, że przetestowany system jest wolny od błędów.
+					Szacuje się,
+					że przeciętnie czas przeznaczony na wykonywanie testów wynosi od 30% do 40% całego procesu
+					wytwórczego, przy czym
+					w przypadku prac nad systemami o szczególnych znaczeniu dla bezpieczeństwa, nakłady czasu i pracy
+					mogą być
+					znacznie większe. Zadaniem testowania w zwinnej metodyce scrum jest dostarczanie codziennej
+					informacji zwrotnej o
+					wytworzonym kodzie. Szybkość uzyskania informacji o błędach uzależniona jest przede wszystkim od
+					stopnia
+					zautomatyzowania testów, a w przypadkach gdy automatyzacja nie jest możliwa – od skutecznego
+					testowania
+					badawczego. Niezależnie od tego, kluczowe znaczenia ma doświadczenie członków zespołu scrumowego,
+					który jako
+					całość odpowiada za testowanie. </p>
+
+				<p>Wykonanie przypadków testowych jest kluczowym elementem procesu testowania. Przypadkiem testowym
+					określamy zbiór
+					danych wejściowych, warunków wykonania (wstępnych i końcowych) oraz oczekiwanych rezultatów.
+					Przypadki testowe
+					opracowywane są w celu dokonania weryfikacji, czy działanie programu jest zgodne ze specyfikacją.
+				</p>
+
+				<p>Wskutek wykonania testów otrzymywany jest ich rezultat, tj. <strong>wynik testów</strong>.
+					W procesie testowym na etapie wykonywania testów jedną z najważniejszych czynności jest porównanie
+					uzyskanego
+					rezultatu z rezultatem oczekiwanym. Pozwala na to na ocenę, czy
+					i w jakim zakresie testowana funkcjonalność systemu jest zgodna z przyjętymi w specyfikacji
+					wymaganiami.
+					Wyodrębnia się 4 możliwe relacje pomiędzy uzyskanym a oczekiwanym wynikiem testu:</p>
+				<ol>
+					<li>otrzymana wartość jest zgodna z wartością oczekiwaną – wówczas mamy do czynienia z sytuacją, w
+						której test
+						został zdany;</li>
+					<li>otrzymana wartość nie jest zgodna z oczekiwanym wynikiem – w takiej sytuacji test nie został
+						zdany;</li>
+					<li>otrzymana wartość jest poprawna, ale oczekiwany wynik był niepoprawnie określony – wynik testu
+						jest wówczas
+						fałszywie negatywne, tzn. brak jest błędu w kodzie, natomiast błędny jest test;</li>
+					<li>uzyskanie nieprawidłowego wyniku przy błędnie sformułowanym teście – tzw. rezultat fałszywie
+						pozytywny, czyli
+						sytuacja, w której mamy do czynienia z błędem w teście i z błędem w kodzie.</li>
+
+				</ol>
+
+				<p>Pod względem formalnym, dla każdego przypadku testowego tworzony jest formularz, zawierający
+					szczegółowe
+					informacje o danym przypadku:</p>
+
+				<figure><img src="../img/formularz.png" alt="obrazek7"></figure>
+				<figcaption>Formularz przypadku testowego, źródło:
+					http://edu.divante.pl/2015/11/06/poradnik-testowaniu-oprogramowania</figcaption>
+			</div>
+
+
+			<div class="ikonka" style="color:#DC4C46"><i class="fas fa-search fa-7x"></i></div>
+			<div class="intro">
+				<h2>Zasady testowania</h2>
+			</div>
+
+			<div class="opis">
+
+				<p>Praktyka związana z testowaniem oprogramowania pozwoliła na wykształcenie wielu zasad, których
+					zastosowanie
+					zwiększa skuteczność pracy wykonywanej przez testerów. Zasady te podkreślają m.in. znaczenie
+					<strong>wymagań
+						systemowych</strong>, które powinny stanowić podstawę dla projektowania i przeprowadzania
+					testów. Dotyczy to
+					również kwestii związanej z <strong>planowaniem testów</strong>, które powinno nastąpić już po
+					zdefiniowaniu
+					wymagań i sporządzeniu projektu systemu, a więc jeszcze przed wytworzeniem kodu. Uwzględniając
+					poziom
+					zaawansowania prac nad systemem, testy należy wykonywać rozpoczynając od najmniejszych elementów
+					danego modułu
+					przechodząc do bardziej złożonych funkcjonalności, poprzez zintegrowane moduły, kończąc na systemie
+					jako całości
+					(tzw. <sttrong>testowanie od szczegółu do ogółu</sttrong>). Im wcześniej w cyklu życia
+					oprogramowania testowanie
+					zostanie rozpoczęte, tym szybciej i przy mniejszym nakładzie pracy oraz kosztów można usunąć błędy.
+					Zgodnie z
+					kolejną zasadą, aby zapewnić większą skuteczność, <strong>testy powinny być realizowane przez osoby,
+						niebędące
+						twórcami kodu</strong> – ma to znaczenie przede wszystkim przy testach wyższego poziomu,
+					odnoszących się do
+					scalonych modułów, kiedy testowaniu podlegają określone funkcjonalności, zgodnie ze specyfikacją
+					wymagań.
+					Przeprowadzenie jednak testowania kompletnego, czyli obejmującego wszystkie możliwe przypadki
+					zadziałania systemu,
+					wszelkie kombinacje danych wejściowych oraz warunków, jest niemożliwe. Do procesu testowania odnosi
+					się <strong>zasada
+						Pareto</strong>, czyli założenie, że przeciętnie 80% błędów w wytworzonym oprogramowaniu jest
+					spowodowana błędami
+					skumulowanymi w średnio 20% modułów systemu. Przy omawianiu paradygmatów testowania wskazuje się
+					również na
+					konieczność <strong>aktualizacji i zmian</strong> w realizowanych testach, ponieważ stosowanie i
+					powtarzanie
+					takich samych testów zmniejsza skuteczność znajdowania nowych błędów (tzw. paradoks pestycydów).
+				</p>
+
+			</div>
+
+			<div class="ikonka" style="color:#DC4C46"><i class="fas fa-search fa-6x"></i></div>
+			<div class="intro">
+				<h2>Przebieg testowania</h2>
+			</div>
+
+			<div class="opis">
+
+				<p>Czynności testowe, realizowane przy zastosowaniu wskazanych powyżej zasad, zorganizowane są w ramach
+					procesu,
+					obejmującego uporządkowaną sekwencję działań. <strong>Organizacja ISTQB</strong> (<i>International
+						Software
+						Testing Qualifications Board</i>) opracowała model podstawowego procesu testowego, składającego
+					się z
+					przedstawionych na poniższym rysunku faz:</p>
+
+				<figure><img src="../img/image7.png" alt="obrazek7"></figure>
+				<figcaption>Fazy podstawowego procesu testowego<br />
+					źródło: opracowanie własne na podstawie A. Roman Testowanie i jakość oprogramowania, PWN, Warszawa
+					2017</figcaption>
+
+				<p>Podczas <strong>planowania testów</strong>, w oparciu o przyjętą strategię testowania, określa się
+					wszystkie
+					niezbędne czynności testowe, szacuje zasoby, czas, budżet, wybiera narzędzia, ustala metryki oraz
+					techniki, które
+					zostaną zastosowane na poszczególnych poziomach testów. <strong>Faza monitorowania</strong> obejmuje
+					czynności
+					związane ze sprawdzaniem postępu przebiegu testów w stosunku do zaplanowanych wcześniej działań,
+					sporządzaniem
+					raportów oraz realizacji działań, mających na celu skorygowanie testów w przypadku, gdy ich przebieg
+					jest odmienny
+					od zamierzonego. W <strong>fazie analizy testów</strong> definiowany jest zakres testów, tzn.
+					dokonuje się wyboru
+					modułów systemu, które zostaną poddane testom; w zależności od poziomu testowania określa się
+					również warunki
+					testowe. W kolejnej fazie, tj. <strong>fazie projektowania testów</strong>, wybierane są przypadki
+					testowe oraz
+					techniki testowania dla określonych wcześniej warunków testowych. <strong>Implementacja
+						testów</strong> obejmuje
+					realizowanie przypadków testowych, tworzenie skryptów w przypadku automatyzacji testów, określanie
+					kolejności
+					realizacji poszczególnych przypadków testowych oraz ich organizację w tzw. suity testowe (zbiór
+					przypadków
+					testowych, które wymagają wykonania w ściśle określonej sekwencji lub takich, które są ze sobą
+					logicznie
+					powiązane). Faza implementacji dotyczy również przygotowania danych, które zostaną użyte w trakcie
+					testów oraz
+					środowiska testowego, w którym testy zostaną przeprowadzone. Po zakończeniu implementacji następuje
+					<strong>wykonanie
+						testów</strong> na wybranych modułach lub w systemie. Otrzymane wyniki porównywane są z
+					oczekiwanymi rezultatami
+					zadziałania oprogramowania – następuje <strong>ocena</strong>, które z testów zostały zdane, a które
+					nie.
+					Szczegółowe informacje dotyczące wykonanych testów zapisywane są w tzw. <strong>dziennikach
+						testów</strong>. Na
+					podstawie raportów sporządzonych po wykonaniu testów podejmowana jest decyzja o zakończeniu danego
+					etapu
+					testowania. Przedmiotowe raporty zawierają przede wszystkim informacje, w jakim stopniu spełnione
+					zostały kryteria
+					wyjścia, określone wcześniej w fazie planowania. Proces testowy kończy <strong>zamknięcie
+						testów</strong>, podczas
+					którego weryfikacji podlega kompletność testów oraz naprawa wszystkich wykrytych błędów. W tej fazie
+					następuje
+					również zebranie danych dotyczących zrealizowanego procesu testowego, ocena jego przebiegu oraz
+					sporządzenie
+					raportu końcowego. </p>
+			</div>
+
+			<a href="metodyki_zwinne.html">
+				<div id="poprzedni">
+					<< Poprzednie </div> </a> <a href="poziomy_testow.html">
+						<div id="next">Następne >> </div>
+			</a>
+
+		</div>
+	</div>
+
+	</div>
+	<footer>
+		<span>Software testing - kompedium wiedzy &copy; 2018.</span> Katrin Dav{}
+	</footer>
+
+	<script src="../script/script.js"></script>
+
+</body>
+
+</html>

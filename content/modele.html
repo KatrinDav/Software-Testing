@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Modele wytwarzania oprogramowania</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style2.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id=mainPage>
+		<header class="nav">
+			<a href="../index.html">
+				<div id="icon">
+					<i class="fas fa-bug fa-2x"></i></div>
+				<h1><span>Software</span> testing </h1>
+			</a>
+
+			<div class="burger" id="ico"><span></span> <span></span> <span></span> </div>
+
+		</header>
+
+		<div id="myNav" class="overlay">
+			<i class="fas fa-long-arrow-alt-up fa-2x" id="arrow" onclick="closeNav()"></i>
+
+			<div class="overlay-content">
+				<a href="../index.html">Strona główna</a>
+				<a href="about.html">O projekcie</a>
+				<a href="podstawowe_zagadnienia.html">Podstawowe zagadnienia</a>
+				<a href="modele.html">Modele</a>
+				<a href="metodyki_zwinne.html">Metodyki zwinne</a>
+				<a href="testowanie.html">Testowanie</a>
+				<a href="poziomy_testow.html">Poziomy tetsów</a>
+				<a href="typyTechniki.html">Typy i techniki testów</a>
+			</div>
+
+		</div>
+
+		<div class="content">
+
+			<div class="ikonka" style="color:#6F9FD8"><i class="fas fa-share-alt fa-8x"></i></div>
+			<div class="intro">
+				<h2>Modele wytwarzania oprogramowania</h2>
+			</div>
+
+			<div class="opis">
+
+				<p>Wytworzenie oprogramowania dla systemu lub aplikacji wymaga przyjęcia pewnej strategii, którą określa się <i><strong>modelem
+							procesu wytwórczego</strong></i>. To, jaki model zostanie wybrany uzależnione jest od przyjętych wymagań co do
+					produktu, dostępnych narzędzi i metod. Model wytwórczy jest pewnym uproszczeniem, mającym na celu odwzorowanie
+					prac, które zostaną wykonane w rzeczywistości. Modele cyklu życia oprogramowania dzielą czas istnienia
+					oprogramowania na pewne fazy, określając zakres czynności i zadań realizowanych w każdej z nich. Wyróżnianymi w
+					literaturze modelami procesu wytwórczego są modele klasyczne, takie jak:
+					<ul>
+						<li>model kaskadowy, zwany również modelem sekwencyjnym czy liniowym (waterfall)</li>
+						<li>prototypowanie, model szybkiej rozbudowy aplikacji. </li>
+					</ul>
+					Wśród modeli ewolucyjnych wyróżnia się modele:
+					<ul>
+						<li>przyrostowy</li>
+						<li>spiralny</li>
+						<li>spiralny winwin</li>
+						<li>metodyki zwinne </li>
+					</ul>
+
+					Innymi modelami stosowanymi do wytwarzania oprogramowania są:
+					<ul>
+						<li>techniki czwartej generacji </li>
+						<li>model oparty na metodach formalnych </li>
+						<li>model szybkiej rozbudowy.</li>
+					</ul>
+				</p>
+			</div>
+
+			<div class="ikonka" style="color:#6F9FD8;"><i class="fas fa-share-alt fa-7x"></i></div>
+			<div class="intro">
+				<h2>Modele klasyczne</h2>
+			</div>
+
+			<div class="opis">
+				<p>
+					W <strong>modelu sekwencyjnym</strong> tworzenie oprogramowania polega na systematycznym realizowaniu po kolei
+					poszczególnych faz, począwszy od fazy analizowania, poprzez projektowanie, programowanie, testowanie i
+					pielęgnację. Do kolejnej fazy przechodzi się po zakończeniu poprzedniej (proces liniowy). Wytworzenie
+					oprogramowania przy zastosowaniu tego modelu wymaga jasnego i dokładnego określenia wymagań już na samym początku
+					prac z uwagi na to, że w modelu tym nie zakłada się wielokrotnego powtarzania prac nad danym aspektem i ponownego
+					wykonywania zadań wskutek wprowadzania zmian w zakresie wymagań funkcjonalnych. Pierwsza wersja oprogramowania nie
+					pojawia się w trakcie trwania prac, ale dopiero w ostatniej fazie, po wykonaniu wszystkich zadań. Jako główną
+					zaletę tej metody wskazuje się przede wszystkim łatwość w zarządzaniu pracami nad projektem, głównie w odniesieniu
+					do planowania harmonogramu i monitorowania. Narzucenie ściśle określonej kolejności zadań, wysoki koszt błędów
+					niewykrytych we wczesnych fazach prac oraz długa przerwa w kontaktach z klientem po zakończeniu fazy analizowania
+					są najczęściej wskazywanymi wadami modelu sekwencyjnego. </p>
+
+				<figure><img src="../img/image3.png" alt="obrazek3"></figure>
+				<figcaption>Model liniowy, źródło: opracowanie własne na podstawie Pressman R.S. <br /> Praktyczne podejście do
+					inżynierii oprogramowania, Wydawnictwo Naukowo – Techniczne, Warszawa 2004r.</figcaption>
+
+
+
+				<p><strong>Prototypowanie</strong> to model pozwalający na uniknięcie problemów wynikających
+					z niewłaściwego i niezbyt dokładnego określenia wymagań dla oprogramowania.
+					W przeciwieństwie do modelu liniowego, w prototypowaniu nie zakłada się, że już na samym początku prac
+					zdefiniowane zostaną wszystkie wymagania dotyczące działania oprogramowania. Kolejnym etapem jest budowa
+					prototypu, a następnie jego weryfikacja przez klienta. Prototyp jest prowizorycznym projektem, uwzględniającym
+					jedynie główne założenia dla systemu z punktu widzenia użytkownika. Budowa prototypu może być powtarzana
+					wielokrotnie aż do momentu takiego sprecyzowania wymagań co do funkcjonalności systemu, które pozwolą na
+					rozpoczęcie prac nad jego ostateczną wersją. Sam prototyp nie stanowi jednak części systemu. Po zaakceptowaniu
+					prototypu powinien on zostać porzucony w celu budowy właściwego produktu. </p>
+				<p><strong>Model szybkiej rozbudowy aplikacji</strong> zakłada bardzo szybkie wytworzenie oprogramowania w oparciu
+					o techniki komponentowe. Jego zastosowanie jest możliwe w sytuacji precyzyjnego określenia wymagań oraz zakresu
+					zadań, które mają być realizowane przez system. Fazy, składające się na ten model to: modelowanie działalności,
+					modelowanie danych, modelowanie procesów, generowanie aplikacji, testowanie i wdrożenie. Przy tworzeniu
+					oprogramowania w tym modelu stosowane są zautomatyzowane narzędzia programistyczne. Model ten stosuje się w tych
+					projektach, w których tworzony system może zostać podzielony na pewne części, moduły. Wówczas możliwe jest
+					prowadzenie jednoczesnych prac nad poszczególnymi częściami systemu przez oddzielne zespoły, co znacznie skraca
+					czas trwania procesu wytwórczego. Zastosowanie modelu szybkiej rozbudowy aplikacji wymaga zaangażowania większej
+					liczby osób (kilka, kilkanaście zespołów), które w dosyć krótkim czasie będą musiały zrealizować stawiane przed
+					nimi zadania. Ten model nie będzie skuteczny w przypadku projektów wymagających zastosowania nowych technologii
+					oraz współdziałania z istniejącymi już programami. </p>
+			</div>
+
+			<div class="ikonka" style="color:#6F9FD8"><i class="fas fa-share-alt fa-6x"></i></div>
+			<div class="intro">
+				<h2>Modele ewolucyjne</h2>
+			</div>
+
+			<div class="opis">
+
+				<p> <strong>Modele ewolucyjne</strong> są odpowiedzią na potrzebę umożliwienia wprowadzania zmian
+					i poprawiania wytworzonej wersji oprogramowania aż do otrzymania ostatecznego produktu, uwzględniającego wszystkie
+					dające się zrealizować oczekiwania. Modele te opierają się na powtarzalnym procesie, w wyniku którego za każdym
+					razem pojawia się bardziej kompletna wersja produktu. Kolejne iteracje pozwalają na uzyskanie przez zaangażowane w
+					projekt osoby większej wiedzy o tworzonym oprogramowaniu oraz zmniejszają ryzyko wystąpienia błędów. </p>
+
+				<p>Jedną z odmian modelu ewolucyjnego jest <strong> model przyrostowy</strong> (kaskadowo – iteracyjny), polegający
+					na wielokrotnym powtarzaniu procesów sekwencyjnych, uwzględniających kolejne rozszerzenia. Punkt wyjścia stanowi
+					tu pierwsza wersja oprogramowania, nazywana <i>rdzeniem produktu</i>, zawierająca jedynie podstawowe
+					funkcjonalności. Zaprojektowanie kolejnych rozszerzeń, uwzględniających nowe funkcje i cechy, następuje po
+					uzyskaniu od użytkowników pierwszej wersji produktu informacji zwrotnych. Wynikiem wykonania każdego kolejnego
+					rozszerzenia jest działająca wersja oprogramowania, wzbogacana w kolejnych iteracjach aż do uzyskania produktu o
+					oczekiwanych parametrach i funkcjonalnościach.</p>
+
+				<p>Modelem ewolucyjnym jest również <strong>model spiralny</strong>. Stanowi on połączenie prototypowania z modelem
+					liniowym. Czynności związane z wytwarzaniem oprogramowania podzielone są w tym modelu na 4 strefy (etapy),
+					obejmujące: planowanie, analizę ryzyka, projektowanie oraz weryfikację.</p>
+
+				<figure><img src="../img/image4.png" alt="obrazek4"></figure>
+				<figcaption>Model spiralny, źródło: https://pl.wikipedia.org/wiki/Model_spiralny</figcaption>
+
+
+				<p>Prace nad produktem rozpoczynają się w środku spirali i biegną zgodnie z ruchem wskazówek zegara. W wyniku
+					planowania otrzymywany jest zestaw specyfikacji i wymagań. Kolejny etap to analiza ryzyka związanego z
+					zaprojektowaniem systemu i jego wdrożeniem do użytkowania – to na tym etapie prac podejmowana jest decyzja o
+					kontynuacji prac, wprowadzeniu zmian do planu bądź też odstąpieniu od dalszego tworzenia systemu. Podjęcie decyzji
+					o kontynuacji prac powoduje przejście do kolejnego etapu cyklu, którym jest projektowanie systemu, tj. opracowanie
+					jego prototypu. Wytworzony prototyp podlega ocenie przez klienta podczas etapu weryfikacji. Po przeprowadzonej
+					ocenie stworzona wersja jest rozbudowywana o kolejne funkcje na podstawie planu opracowanego z uwzględnieniem
+					zgłoszonych uwag, co oznacza kolejną rotację na spirali. Model spiralny można rozbudować o dodatkowe strefy
+					związane z negocjacjami pomiędzy klientem, zamawiającym produkt a wytwórcami oprogramowania w celu uzyskania
+					satysfakcjonującego obie strony kompromisu. Uzyskany w ten sposób model określany jest jako model spiralny winwin.
+					W konstrukcji tego modelu podkreślone jest znaczenie właściwej komunikacji pomiędzy stronami, zdefiniowania
+					oczekiwań oraz ustalenia możliwości ich realizacji tak, aby projekt zakończony został sukcesem. </p>
+
+				<p>Wytwarzanie oprogramowania przy zastosowaniu <strong>technik zwinnych</strong> (zwanych też lekkimi) oparte jest
+					na ewolucyjnych metodach iteracyjno – przyrostowych. Istotą metod zwinnych jest odejście od próby określenia z
+					góry wszystkich wymagań i rozwiązań w realizowanym projekcie. Poszczególne funkcjonalności implementowane są na
+					bieżąco - wówczas, gdy pojawi się potrzeba ich wprowadzenia do systemu. Celem jest szybkie przygotowanie produktu,
+					który działa, pomimo tego że realizuje jedynie część funkcji. Jego dalszy rozwój następuje w kolejnych iteracjach.
+					Iteracje trwają co do zasady od 2 do 3 tygodni, ich czas jest stały, a zakres zadań do wykonania w bieżącej
+					iteracji jest ustalany w momencie jej rozpoczęcia. Przy podziale prac w zespole uwzględnia się możliwości
+					deweloperów oraz preferencje użytkownika. Podczas każdej iteracji tworzony i testowany jest kod (testy
+					akceptacyjne) dla wybranych funkcjonalności. Przetestowany i zaakceptowany fragment oprogramowania integrowany
+					jest z wytworzoną już częścią systemu, który w nowej wersji jest przekazywany użytkownikom. Produkt uzyskiwany w
+					efekcie kolejnych iteracji jest więc zawsze produktem działającym. Iteracja kończy się z momentem upływu
+					przyjętego czasu. </p>
+			</div>
+
+			<div class="ikonka" style="color:#6F9FD8"><i class="fas fa-share-alt fa-5x"></i></div>
+			<div class="intro">
+				<h2>Pozostałe modele</h2>
+			</div>
+
+
+
+			<div class="opis">
+
+				<p><strong>Techniki czwartej generacji</strong> to narzędzia programistyczne, generujące kod odpowiadający
+					ustalonej specyfikacji. Są to języki programowania bardzo wysokiego poziomu. Dzięki ich zastosowaniu właściwe
+					opisanie oczekiwanych rezultatów działania poszczególnych funkcjonalności pozwala na wygenerowanie kodu
+					oprogramowania. Tworzenie oprogramowania w modelu opartym na technikach czwartej generacji wymaga dokładnego
+					określenia wymagań dla produktu. Kolejnym etapem jest ustalenie planu prac wytwórczych, a następnie implementacja.
+					Wytworzony kod podlega szczegółowym testom oraz integracji. Zalety wykorzystania tych technik, związane przede
+					wszystkim ze znacznym skróceniem czasu prac wytwórczych, są szczególnie podkreślane przy realizacji małych i
+					średnich projektów. </p>
+
+				<p><strong>Metody formalne</strong> stosowane w inżynierii oprogramowania to metody oparte na matematyce, gdzie
+					systemy opisywane są za pomocą elementów logiki i teorii zbiorów. W tym przypadku zarówno określenie wymagań na
+					etapie definiowania jak i ocena, w jakim zakresie wymagania te zostały zrealizowane dokonywane jest przy użyciu
+					metod matematycznych, które pozwalają z wysoką precyzją ocenić zgodność wytworzonego oprogramowania ze
+					specyfikacją. Zgodnie z hipotezą Hoare’a, dowodzenie programów pozwala na rozwiązanie problemów związanych z
+					poprawnością, kompatybilnością oraz dokumentacją. Metody formalne dzieli się na metody modelowe i aksjomatyczne.
+					Za pomocą metod modelowych można opisać działanie wygenerowanego kodu przy użyciu standardowych dla modelowania
+					pojęć. Ocena poprawności za pomocą metod aksjomatycznych polega natomiast na sprawdzeniu prawdziwości zestawu zdań
+					dla wybranej funkcjonalności systemu. Zastosowanie metod formalnych pozwala na wykrycie sprzeczności,
+					niejednoznaczności i braków w wytworzonym oprogramowaniu, a poprawność jego działania może być udowodniona
+					matematycznie. Ma to szczególne znaczenie dla systemów o krytycznym znaczeniu, z uwagi na znaczące negatywne
+					skutki w przypadku ich awarii. </p>
+
+				<p><strong>Tworzenie oprogramowania w oparciu o komponenty</strong> jest obiektową metodą wytwarzania
+					oprogramowania, opierającą się na modelu spiralnym. Do budowy systemu wykorzystywane są przygotowane już klasy
+					(komponenty), zawierające struktury danych oraz algorytmy. Początkiem fazy inżynierii jest określenie wymaganych
+					klas, które są pobierane z bibliotek już istniejących klas lub tworzone – w przypadku ich braku. Gotowe komponenty
+					mogą być używane wielokrotnie do konstrukcji kodu, dzięki czeku skróceniu ulega czas prac w fazie inżynierii.
+					Użycie zastosowanych i sprawdzonych już wcześniej komponentów zmniejsza ryzyko błędów, zwiększając ich
+					niezawodność. </p>
+			</div>
+		</div>
+
+	</div>
+	<a href="podstawowe_zagadnienia.html">
+		<div id="poprzedni">
+			<< Poprzednie </div> </a> <a href="metodyki_zwinne.html">
+				<div id="next">Następne >> </div>
+	</a>
+
+	</div>
+	<footer>
+		<span>Software testing - kompedium wiedzy &copy; 2018.</span> Katrin Dav{}
+	</footer>
+
+	<script src="../script/script.js"></script>
+
+
+</body>
+
+</html>
