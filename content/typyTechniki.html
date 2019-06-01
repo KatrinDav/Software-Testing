@@ -4,6 +4,7 @@
 <head>
 	<title>Typy i techniki testów</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/style2.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -54,9 +55,12 @@
 
 			<div class="opis">
 
-				<p>Typem testu określa się grupę czynności, pozwalających na przetestowanie wybranych komponentów lub modułów
-					systemu (bądź systemu jako całości) pod względem ustalonych celów, pozwalających na sprawdzenie funkcjonalności,
-					aspektów związanych ze sposobem ich działania, czy użytecznością. Uwzględniając cele testów, rozróżnia się
+				<p>Typem testu określa się grupę czynności, pozwalających na przetestowanie wybranych komponentów lub
+					modułów
+					systemu (bądź systemu jako całości) pod względem ustalonych celów, pozwalających na sprawdzenie
+					funkcjonalności,
+					aspektów związanych ze sposobem ich działania, czy użytecznością. Uwzględniając cele testów,
+					rozróżnia się
 					następujące ich typy: </p>
 
 
@@ -67,8 +71,10 @@
 					<li>związane ze zmianą</li>
 				</ul>
 
-				<p>W przeciwieństwie do poziomów testowania, typy testów nie są uzależnione od ich umiejscowienia w procesie
-					wytwarzania oprogramowania, co oznacza, że wymienione testy mogą zostać przeprowadzone na każdym z opisanych
+				<p>W przeciwieństwie do poziomów testowania, typy testów nie są uzależnione od ich umiejscowienia w
+					procesie
+					wytwarzania oprogramowania, co oznacza, że wymienione testy mogą zostać przeprowadzone na każdym z
+					opisanych
 					wcześniej poziomów. </p>
 			</div>
 
@@ -80,13 +86,17 @@
 
 			<div class="opis">
 
-				<p><strong>Testy funkcjonalne</strong> pozwalają na zweryfikowanie prawidłowości działania poszczególnych
-					funkcjonalności systemu, a ich przeprowadzanie odbywa się na podstawie specyfikacji wymagań, określających, co
-					dokładnie dany element systemu ma wykonywać. Testowanie funkcjonalne odbywa się głównie w oparciu o wymienione i
+				<p><strong>Testy funkcjonalne</strong> pozwalają na zweryfikowanie prawidłowości działania
+					poszczególnych
+					funkcjonalności systemu, a ich przeprowadzanie odbywa się na podstawie specyfikacji wymagań,
+					określających, co
+					dokładnie dany element systemu ma wykonywać. Testowanie funkcjonalne odbywa się głównie w oparciu o
+					wymienione i
 					scharakteryzowane w poniższej tabeli <i>techniki czarnoskrzynkowe</i>. </p>
 
 				<table>
-					<caption align="bottom" style="text-align: left;">Techniki testowania funkcjonalnego, źródło: opracowanie własne
+					<caption align="bottom" style="text-align: left;">Techniki testowania funkcjonalnego, źródło:
+						opracowanie własne
 						na podstawie A.Roman <i>Testowanie i jakość oprogramowania</i>, PWN, Warszawa 2017</caption>
 
 					<thead>
@@ -100,74 +110,117 @@
 
 						<tr>
 							<td class="nazwa"><i>Podział na klasy równoważności</i></td>
-							<td class="opis">Zbiór danych wejściowych (lub wyjściowych) do systemu dzielony jest na podzbiory, zwane klasami
-								równoważności, ze względu na przyjętą charakterystykę, np. podział liczb rzeczywistych na ujemne, dodatnie i
-								równe zero. Przypadki tworzone są dla każdego wybranego elementu z każdej klasy; przyjmuje się założenie, że
-								wynik testu otrzymany wskutek użycia elementu z danej klasy będzie taki sam dla każdego pozostałego elementu z
+							<td class="opis">Zbiór danych wejściowych (lub wyjściowych) do systemu dzielony jest na
+								podzbiory, zwane klasami
+								równoważności, ze względu na przyjętą charakterystykę, np. podział liczb rzeczywistych
+								na ujemne, dodatnie i
+								równe zero. Przypadki tworzone są dla każdego wybranego elementu z każdej klasy;
+								przyjmuje się założenie, że
+								wynik testu otrzymany wskutek użycia elementu z danej klasy będzie taki sam dla każdego
+								pozostałego elementu z
 								klasy (z wysokim prawdopodobieństwem);</td>
-							<td class="examp">klasa niepoprawności dla zmiennej pktEgz1 {x<0} i pktEgz2 {x>0} <br /><i>String
-										ObliczWynik(int pktEgz1, int pktEgz2)<br /> If (pktEgz1 + pktEgz2>89) then return „5.0”</i> pktEgz1 = -10,
-									pktEgz2=100, ObliczWynik = 90; jeżeli specyfikacja nie zakłada punktów ujemnych, występuje błąd przekroczenia
+							<td class="examp">klasa niepoprawności dla zmiennej pktEgz1 {x<0} i pktEgz2 {x>0}
+									<br /><i>String
+										ObliczWynik(int pktEgz1, int pktEgz2)<br /> If (pktEgz1 + pktEgz2>89) then
+										return „5.0”</i> pktEgz1 = -10,
+									pktEgz2=100, ObliczWynik = 90; jeżeli specyfikacja nie zakłada punktów ujemnych,
+									występuje błąd przekroczenia
 									prawidłowych zakresów wartości zmiennych;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa"><i>Analiza wartości brzegowych</i></td>
-							<td class="opis">Dziedzina danych wejściowych lub wyjściowych jest dzielona na klasy; do testów wybiera się
-								jednak nie dowolne elementy, ale te, które znajdują się na brzegach klas (tzw. wartości brzegowe, czyli
-								najmniejsze lub największe wartości w danej klasie). Technikę tę stosuje się więc do zmiennych, które można
-								uporządkować na skali. Za jej pomocą weryfikuje się głównie wystąpienie błędów spowodowanych nieprawidłowym
-								zastosowaniem operatorów porównań czy też przetwarzaniem zmiennych w tablicy od elementu o indeksie równym
-								jeden zamiast równym zero. W przypadku, gdy mamy do czynienia ze zmiennymi ciągłymi, do określenia wartości
-								brzegowych używany jest tzw. epsilon maszynowy, będący najmniejszą wartością o typie zmiennoprzecinkowym, o
+							<td class="opis">Dziedzina danych wejściowych lub wyjściowych jest dzielona na klasy; do
+								testów wybiera się
+								jednak nie dowolne elementy, ale te, które znajdują się na brzegach klas (tzw. wartości
+								brzegowe, czyli
+								najmniejsze lub największe wartości w danej klasie). Technikę tę stosuje się więc do
+								zmiennych, które można
+								uporządkować na skali. Za jej pomocą weryfikuje się głównie wystąpienie błędów
+								spowodowanych nieprawidłowym
+								zastosowaniem operatorów porównań czy też przetwarzaniem zmiennych w tablicy od elementu
+								o indeksie równym
+								jeden zamiast równym zero. W przypadku, gdy mamy do czynienia ze zmiennymi ciągłymi, do
+								określenia wartości
+								brzegowych używany jest tzw. epsilon maszynowy, będący najmniejszą wartością o typie
+								zmiennoprzecinkowym, o
 								jaką można zmienić wartość tej zmiennej.</td>
-							<td class="examp">zweryfikowanie funkcji, obliczającej zniżki dla osób poniżej 21 roku życia wymaga stworzenia
-								przedziałów: X1 {min int;-1}, <br /> X2 {0;21},<br /> X3 {22; max int}; <br />przypadki testowe wykonywane są
+							<td class="examp">zweryfikowanie funkcji, obliczającej zniżki dla osób poniżej 21 roku życia
+								wymaga stworzenia
+								przedziałów: X1 {min int;-1}, <br /> X2 {0;21},<br /> X3 {22; max int}; <br />przypadki
+								testowe wykonywane są
 								wówczas dla zmiennych o wartościach: <br />x
 								<-1, <br /> x = -1, <br /> x = 0, <br /> x = 21, <br /> x = 22, <br /> x > 22. </td>
 						</tr>
 
 						<tr>
 							<td class="nazwa"><i>Tablice decyzyjne</i></td>
-							<td class="opis">W przeciwieństwie do techniki klasy równoważności i analizy wartości brzegowych, za pomocą
-								tablic decyzyjnych możliwe jest testowanie systemu, uwzględniając występowanie kombinacji danych wejściowych.
-								Hipoteza błędu zakłada występowanie nieprawidłowości wskutek niewłaściwego obsłużenia sytuacji spowodowanej
-								kombinacją różnych czynników. Technika ta stosowana jest do weryfikacji logiki biznesowej systemu lub jego
-								modułu. Częściami składowymi tablicy są kolumny i wiersze: kolumny odpowiadają regułom decyzyjnym, a wiersze
-								opisują warunki i akcje, które zachodzą na skutek wystąpienia różnych kombinacji warunków; zawartość tablicy
-								interpretuje się jako logiczną implikację, tj. np.: jeżeli zajdzie warunek nr 1 oraz warunek nr 2, to system
+							<td class="opis">W przeciwieństwie do techniki klasy równoważności i analizy wartości
+								brzegowych, za pomocą
+								tablic decyzyjnych możliwe jest testowanie systemu, uwzględniając występowanie
+								kombinacji danych wejściowych.
+								Hipoteza błędu zakłada występowanie nieprawidłowości wskutek niewłaściwego obsłużenia
+								sytuacji spowodowanej
+								kombinacją różnych czynników. Technika ta stosowana jest do weryfikacji logiki
+								biznesowej systemu lub jego
+								modułu. Częściami składowymi tablicy są kolumny i wiersze: kolumny odpowiadają regułom
+								decyzyjnym, a wiersze
+								opisują warunki i akcje, które zachodzą na skutek wystąpienia różnych kombinacji
+								warunków; zawartość tablicy
+								interpretuje się jako logiczną implikację, tj. np.: jeżeli zajdzie warunek nr 1 oraz
+								warunek nr 2, to system
 								wykona akcję nr 1. </td>
-							<td class="examp">dane są 3 warunki wejściowe: pierwszy i drugi przyjmują wartości <i>prawda</i> i <i>fałsz</i>,
-								a trzeci może przyjmować wartości 21, 37, 45. Oznacza to wystąpienie 12 kombinacji warunków, które są
+							<td class="examp">dane są 3 warunki wejściowe: pierwszy i drugi przyjmują wartości
+								<i>prawda</i> i <i>fałsz</i>,
+								a trzeci może przyjmować wartości 21, 37, 45. Oznacza to wystąpienie 12 kombinacji
+								warunków, które są
 								jednocześnie warunkami testowymi, podlegającymi weryfikacji.</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa"><i>Grafy przyczynowo – skutkowe</i></td>
-							<td class="opis">Podobnie, jak tablice decyzyjne technika ta polega na opisywaniu logicznych zależności,
-								zachodzących w systemie pomiędzy przyczynami (tj. warunkami) a skutkami (tj. akcjami), przy czym pozwala ona
-								dodatkowo określić zależności występujące pomiędzy samymi przyczynami bądź pomiędzy samymi skutkami. Hipotezą
-								błędu jest wystąpienie nieprawidłowości spowodowanych niewłaściwą kombinacją czynników. Standardowo, graf
-								składa się z dwóch lub trzech wierzchołków oraz krawędzi, które odzwierciedlają zachodzące pomiędzy
-								wierzchołkami zależności logiczne takie, jak: negacja, alternatywa, koniunkcja, negacja alternatywy oraz
+							<td class="opis">Podobnie, jak tablice decyzyjne technika ta polega na opisywaniu logicznych
+								zależności,
+								zachodzących w systemie pomiędzy przyczynami (tj. warunkami) a skutkami (tj. akcjami),
+								przy czym pozwala ona
+								dodatkowo określić zależności występujące pomiędzy samymi przyczynami bądź pomiędzy
+								samymi skutkami. Hipotezą
+								błędu jest wystąpienie nieprawidłowości spowodowanych niewłaściwą kombinacją czynników.
+								Standardowo, graf
+								składa się z dwóch lub trzech wierzchołków oraz krawędzi, które odzwierciedlają
+								zachodzące pomiędzy
+								wierzchołkami zależności logiczne takie, jak: negacja, alternatywa, koniunkcja, negacja
+								alternatywy oraz
 								negacja koniunkcji.</td>
-							<td class="examp">program obliczający scoring kredytowy: ustalenie odpowiedniej oceny kredytowej (skutek)
-								następuje na podstawie wprowadzonych danych (przyczyny); od kombinacji przyczyn zależny jest otrzymany skutek.
+							<td class="examp">program obliczający scoring kredytowy: ustalenie odpowiedniej oceny
+								kredytowej (skutek)
+								następuje na podstawie wprowadzonych danych (przyczyny); od kombinacji przyczyn zależny
+								jest otrzymany skutek.
 							</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa"><i>Maszyna skończenie stanowa</i></td>
-							<td class="opis">W odróżnieniu od opisywanych powyżej technik, umożliwia przetestowanie przejść pomiędzy stanami
-								systemu, pozwalając na ocenę dynamiki jego działania. Technika ta stanowi pewien abstrakcyjny model, składający
-								się z określonej liczby stanów systemu oraz zachodzącym między nimi przejść z dodatkowym uwzględnieniem
-								ewentualnych akcji. Przejścia są skutkiem wystąpienia zdarzeń, podczas których może dojść do wystąpienia innych
-								tzw. akcji oraz warunków. Hipoteza błędu zakłada, że wystąpienie nieprawidłowości w systemie spowodowane jest
-								niewłaściwie zaimplementowaną sekwencją działań. Testowanie odbywa się w oparciu o diagramy wyróżniające stany,
-								w których system lub jego moduł mogą się znajdować oraz zdarzenia, skutkujące przejściem z jednego stanu w
-								drugi. Maszyna skończenie stanowa wyróżnia 3 rodzaje stanów: początkowy (np. uruchomienie programu), końcowy
-								(zakończenie działania) oraz wewnętrzny. Technikę tę można również zdefiniować za pomocą tabel – powstaje
-								wówczas tzw. tablica stanów, która opisuje dozwolone i niedozwolone przejścia pomiędzy stanami zestawiając je z
+							<td class="opis">W odróżnieniu od opisywanych powyżej technik, umożliwia przetestowanie
+								przejść pomiędzy stanami
+								systemu, pozwalając na ocenę dynamiki jego działania. Technika ta stanowi pewien
+								abstrakcyjny model, składający
+								się z określonej liczby stanów systemu oraz zachodzącym między nimi przejść z dodatkowym
+								uwzględnieniem
+								ewentualnych akcji. Przejścia są skutkiem wystąpienia zdarzeń, podczas których może
+								dojść do wystąpienia innych
+								tzw. akcji oraz warunków. Hipoteza błędu zakłada, że wystąpienie nieprawidłowości w
+								systemie spowodowane jest
+								niewłaściwie zaimplementowaną sekwencją działań. Testowanie odbywa się w oparciu o
+								diagramy wyróżniające stany,
+								w których system lub jego moduł mogą się znajdować oraz zdarzenia, skutkujące przejściem
+								z jednego stanu w
+								drugi. Maszyna skończenie stanowa wyróżnia 3 rodzaje stanów: początkowy (np.
+								uruchomienie programu), końcowy
+								(zakończenie działania) oraz wewnętrzny. Technikę tę można również zdefiniować za pomocą
+								tabel – powstaje
+								wówczas tzw. tablica stanów, która opisuje dozwolone i niedozwolone przejścia pomiędzy
+								stanami zestawiając je z
 								możliwymi do zaistnienia zdarzeniami. </td>
 
 							<td class="examp">Maszyna stanowa dla bankomatu:<br />
@@ -189,41 +242,62 @@
 
 			<div class="opis">
 
-				<p><strong>Testowanie niefunkcjonalne </strong>polega na weryfikacji systemu lub jego poszczególnych modułów,
-					pozwalającej na ocenę sposobu ich działania. Podczas testów niefunkcjonalnych sprawdzane są atrybuty systemu
-					związane przede wszystkim z jego wydajnością, użytecznością, niezawodnością oraz bezpieczeństwem. Ten rodzaj
+				<p><strong>Testowanie niefunkcjonalne </strong>polega na weryfikacji systemu lub jego poszczególnych
+					modułów,
+					pozwalającej na ocenę sposobu ich działania. Podczas testów niefunkcjonalnych sprawdzane są atrybuty
+					systemu
+					związane przede wszystkim z jego wydajnością, użytecznością, niezawodnością oraz bezpieczeństwem.
+					Ten rodzaj
 					testów pozwala na uzyskanie odpowiedzi na pytanie: jak działa system?</p>
-				<p><strong>Testy wydajności</strong> realizowane są w odniesieniu do dwóch odrębnych obszarów: zachowania
-					systemu/modułu w czasie oraz zużycia zasobów. Przy badaniu zachowania w czasie weryfikacji podlegają poniższe
+				<p><strong>Testy wydajności</strong> realizowane są w odniesieniu do dwóch odrębnych obszarów:
+					zachowania
+					systemu/modułu w czasie oraz zużycia zasobów. Przy badaniu zachowania w czasie weryfikacji podlegają
+					poniższe
 					metryki:</p>
 				<ul>
-					<li>czas odpowiedzi – czas, jaki mija pomiędzy momentem wprowadzenia do systemu polecenia do wykonania, a momentem
-						otrzymania informacji zwrotnej (tj. odpowiedzi); jest on definiowany jako suma czasu przetwarzania i czasu
+					<li>czas odpowiedzi – czas, jaki mija pomiędzy momentem wprowadzenia do systemu polecenia do
+						wykonania, a momentem
+						otrzymania informacji zwrotnej (tj. odpowiedzi); jest on definiowany jako suma czasu
+						przetwarzania i czasu
 						transmisji;</li>
-					<li>czas przetwarzania – określa czas pomiędzy otrzymaniem polecenia przez system a zwróceniem wyniku;</li>
+					<li>czas przetwarzania – określa czas pomiędzy otrzymaniem polecenia przez system a zwróceniem
+						wyniku;</li>
 					<li>czas transmisji – czas przesłania komunikatu;</li>
-					<li>czas operacji – czas, w jakim użytkownik systemu otrzymuje oczekiwaną odpowiedź; biorąc pod uwagę, że dotyczy
+					<li>czas operacji – czas, w jakim użytkownik systemu otrzymuje oczekiwaną odpowiedź; biorąc pod
+						uwagę, że dotyczy
 						on różnych akcji, jest ona składową wielu czasów odpowiedzi.</li>
 				</ul>
 
-				<p>Aby określenie w trakcie testów wartości tych metryk pozwalało na dokonanie właściwej oceny szybkości działania
-					systemu, wymagania dotyczące zachowania w czasie badanego systemu powinny zostać precyzyjnie zdefiniowane. Drugi z
-					aspektów testowania wydajności systemu, czyli <strong>badanie zużycia zasobów</strong>, obejmuje weryfikację
-					wykorzystania przez system lub jego wybrany moduł: zajmowanego na dysku miejsca, pamięci urządzenia, na którym
-					oprogramowanie jest zainstalowane, urządzeń peryferyjnych oraz czasu pracy procesora. W testach wydajności,
-					zarówno zachowanie systemu w czasie jak i zużycie przez system zasobów badane jest poprzez wygenerowanie
-					obciążenia i obserwacji działania systemu w takich niestandardowych warunkach. Punktem odniesienia dla testowania
-					obciążenia są wyniki testów, weryfikujących działanie systemu w normalnych warunkach. Testowanie wydajności
-					obejmuje również testowanie przeciążające (mające na celu znalezienia maksymalnej wartości obciążenia, której
-					przekroczenie powoduje brak działania systemu zgodnie z oczekiwaniami) oraz testowanie skalowalności (polegające
+				<p>Aby określenie w trakcie testów wartości tych metryk pozwalało na dokonanie właściwej oceny szybkości
+					działania
+					systemu, wymagania dotyczące zachowania w czasie badanego systemu powinny zostać precyzyjnie
+					zdefiniowane. Drugi z
+					aspektów testowania wydajności systemu, czyli <strong>badanie zużycia zasobów</strong>, obejmuje
+					weryfikację
+					wykorzystania przez system lub jego wybrany moduł: zajmowanego na dysku miejsca, pamięci urządzenia,
+					na którym
+					oprogramowanie jest zainstalowane, urządzeń peryferyjnych oraz czasu pracy procesora. W testach
+					wydajności,
+					zarówno zachowanie systemu w czasie jak i zużycie przez system zasobów badane jest poprzez
+					wygenerowanie
+					obciążenia i obserwacji działania systemu w takich niestandardowych warunkach. Punktem odniesienia
+					dla testowania
+					obciążenia są wyniki testów, weryfikujących działanie systemu w normalnych warunkach. Testowanie
+					wydajności
+					obejmuje również testowanie przeciążające (mające na celu znalezienia maksymalnej wartości
+					obciążenia, której
+					przekroczenie powoduje brak działania systemu zgodnie z oczekiwaniami) oraz testowanie skalowalności
+					(polegające
 					na ustaleniu, jak zmienia się wydajność systemu względem rosnącego obciążenia). </p>
 
 				<p><strong>Testowanie użyteczności</strong> pozwala na ocenę stopnia, w jakim wytworzony system jest dla
-					użytkowników skutecznym narzędziem, umożliwiającym realizację określonych celów. Użyteczność mierzona jest za
+					użytkowników skutecznym narzędziem, umożliwiającym realizację określonych celów. Użyteczność
+					mierzona jest za
 					pomocą poniższych technik: </p>
 
 				<table class="tabela2">
-					<caption align="bottom" style="text-align: left;">Techniki testowania użyteczności, źródło: opracowanie własne na
+					<caption align="bottom" style="text-align: left;">Techniki testowania użyteczności, źródło:
+						opracowanie własne na
 						podstawie A.Roman <i>Testowanie i jakość oprogramowania</i>, PWN, Warszawa 2017</caption>
 					<thead>
 						<tr>
@@ -235,70 +309,114 @@
 					<tbody>
 						<tr>
 							<td class="nazwa2"><i>Inspekcja</i></td>
-							<td class="opis2">wykonywana przez użytkowników jeszcze przed oddaniem do użytkowania całego systemu, polega na
-								ocenie pewnych wybranych aspektów tworzonego systemu, które istotnie wpływają na poziom jego użyteczności;</td>
+							<td class="opis2">wykonywana przez użytkowników jeszcze przed oddaniem do użytkowania całego
+								systemu, polega na
+								ocenie pewnych wybranych aspektów tworzonego systemu, które istotnie wpływają na poziom
+								jego użyteczności;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Walidacja implementacji</i></td>
-							<td class="opis2">na podstawie przygotowanych wcześniej scenariuszy testowych dokonuje się oceny takich
-								atrybutów związanych z użyciem systemu, jak: efektywność, zrozumiałość, szybkość uczenia się. Przed wykonaniem
-								testów użytkownicy pytani są o oczekiwania dotyczące systemu, a po przeprowadzeniu testów - o wrażenia z pracy
+							<td class="opis2">na podstawie przygotowanych wcześniej scenariuszy testowych dokonuje się
+								oceny takich
+								atrybutów związanych z użyciem systemu, jak: efektywność, zrozumiałość, szybkość uczenia
+								się. Przed wykonaniem
+								testów użytkownicy pytani są o oczekiwania dotyczące systemu, a po przeprowadzeniu
+								testów - o wrażenia z pracy
 								z systemem;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Kwestionariusze (ankiety)</i></td>
-							<td class="opis2">użytkownik systemu odpowiada na zestaw pytań dotyczących testowanego oprogramowania.
-								Udzielenie odpowiedzi dokonywane jest poprzez wybór opcji: nie zgadzam się, zgadzam się, nie wiem – w
-								odniesieniu do przedstawionych w treści kwestionariusza twierdzeń. Oceniane cechy systemu oraz udzielone
-								odpowiedzi posiadają wartości liczbowe, dzięki czemu można dokonać ich ilościowej analizy i porównać ze
+							<td class="opis2">użytkownik systemu odpowiada na zestaw pytań dotyczących testowanego
+								oprogramowania.
+								Udzielenie odpowiedzi dokonywane jest poprzez wybór opcji: nie zgadzam się, zgadzam się,
+								nie wiem – w
+								odniesieniu do przedstawionych w treści kwestionariusza twierdzeń. Oceniane cechy
+								systemu oraz udzielone
+								odpowiedzi posiadają wartości liczbowe, dzięki czemu można dokonać ich ilościowej
+								analizy i porównać ze
 								średnimi ocenami użyteczności dla innych systemów;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Ocena heurystyczna</i></td>
-							<td class="opis2">technika pozwalająca na ocenę interfejsu użytkownika z uwzględnieniem zgodności z
-								heurystykami, czyli przyjętymi zasadami użyteczności. Zdefiniowanych zostało wiele zasad dotyczących
-								efektywności i użyteczności systemu, a najczęściej przywoływanymi w literaturze są heurystyki Nielsena,
-								sformułowane na początku lat 90. XX w. Zgodnie z tymi zasadami użyteczność systemu wyraża się poprzez: bieżące
-								informowanie użytkownika o statusie systemu, posługiwanie się zrozumiałym językiem, umożliwienie użytkownikowi
-								kontroli nad działaniami, które realizuje za pomocą systemu, zachowanie spójności graficznej oraz przyjętych
-								wcześniej standardów, zapobieganie błędom (np. poprzez uniemożliwienie użytkownikowi wprowadzenia
-								nieprawidłowego formatu danych), udostępnienie informacji niezbędnych do podjęcia przez użytkownika decyzji co
-								do dalszych działań w systemie, zapewnienie elastyczności pracy z systemem, skutecznej obsługi błędów oraz
+							<td class="opis2">technika pozwalająca na ocenę interfejsu użytkownika z uwzględnieniem
+								zgodności z
+								heurystykami, czyli przyjętymi zasadami użyteczności. Zdefiniowanych zostało wiele zasad
+								dotyczących
+								efektywności i użyteczności systemu, a najczęściej przywoływanymi w literaturze są
+								heurystyki Nielsena,
+								sformułowane na początku lat 90. XX w. Zgodnie z tymi zasadami użyteczność systemu
+								wyraża się poprzez: bieżące
+								informowanie użytkownika o statusie systemu, posługiwanie się zrozumiałym językiem,
+								umożliwienie użytkownikowi
+								kontroli nad działaniami, które realizuje za pomocą systemu, zachowanie spójności
+								graficznej oraz przyjętych
+								wcześniej standardów, zapobieganie błędom (np. poprzez uniemożliwienie użytkownikowi
+								wprowadzenia
+								nieprawidłowego formatu danych), udostępnienie informacji niezbędnych do podjęcia przez
+								użytkownika decyzji co
+								do dalszych działań w systemie, zapewnienie elastyczności pracy z systemem, skutecznej
+								obsługi błędów oraz
 								systemu pomocy.</td>
 						</tr>
 					</tbody>
 				</table>
-				<p>Kolejnym poddawanym testom, niefunkcjonalnym atrybutem systemu jest jego <strong>niezawodność</strong>. Pojęcie
-					niezawodności oznacza zdolność systemu do poprawnego wykonywania swoich funkcji przez określony czas. Im dłużej
-					system działa bezawaryjnie, tym większa jest jego niezawodność. W ramach niezawodności testowaniu poddawane są:
-					dojrzałość systemu, jego odporność na błędy, dostępność i odtwarzalność. Pod pojęciem dojrzałości rozumiane jest
-					zgodne z oczekiwaniami, bezawaryjne działanie systemu w warunkach jego standardowego użytkowania. Uwzględniając,
-					że wystąpienie błędów i awarii w funkcjonowaniu systemu jest zjawiskiem nieuniknionym, stosowane do oceny
-					dojrzałości systemu metryki, oparte są na czasie związanym z występowaniem awarii. Wyróżnia się wśród nich: średni
-					czas pomiędzy następującymi po sobie awariami, średni czas niezbędny do naprawy awarii, średni czas, jaki mija do
-					kolejnej awarii oraz współczynnik awarii. Odporność na błędy pozwala ustalić, w jakim stopniu system prawidłowo
-					realizuje swoje funkcje pomimo występujących awarii i błędów, np. wprowadzaniu niewłaściwych danych, warunków
-					znacznego obciążenia, błędów związanych z pamięcią czy obsługą wyjątków. Dostępność systemu stanowi często miarę
-					jego jakości i określa, przez jaki czas system jest faktycznie dostępny, tzn. wykonuje swoje funkcje w stosunku do
-					czasu, kiedy znajduje się w użytkowaniu. Odtwarzalność jest cechą systemu, określającą jego zdolność do
-					przywrócenia stanu danych oraz operacji sprzed momentu, w którym nastąpiła awaria i przerwanie pracy systemu.
-					Najprościej odtwarzalność systemu może zostać zweryfikowana poprzez wyłączenie zasilania w czasie, kiedy system
+				<p>Kolejnym poddawanym testom, niefunkcjonalnym atrybutem systemu jest jego
+					<strong>niezawodność</strong>. Pojęcie
+					niezawodności oznacza zdolność systemu do poprawnego wykonywania swoich funkcji przez określony
+					czas. Im dłużej
+					system działa bezawaryjnie, tym większa jest jego niezawodność. W ramach niezawodności testowaniu
+					poddawane są:
+					dojrzałość systemu, jego odporność na błędy, dostępność i odtwarzalność. Pod pojęciem dojrzałości
+					rozumiane jest
+					zgodne z oczekiwaniami, bezawaryjne działanie systemu w warunkach jego standardowego użytkowania.
+					Uwzględniając,
+					że wystąpienie błędów i awarii w funkcjonowaniu systemu jest zjawiskiem nieuniknionym, stosowane do
+					oceny
+					dojrzałości systemu metryki, oparte są na czasie związanym z występowaniem awarii. Wyróżnia się
+					wśród nich: średni
+					czas pomiędzy następującymi po sobie awariami, średni czas niezbędny do naprawy awarii, średni czas,
+					jaki mija do
+					kolejnej awarii oraz współczynnik awarii. Odporność na błędy pozwala ustalić, w jakim stopniu system
+					prawidłowo
+					realizuje swoje funkcje pomimo występujących awarii i błędów, np. wprowadzaniu niewłaściwych danych,
+					warunków
+					znacznego obciążenia, błędów związanych z pamięcią czy obsługą wyjątków. Dostępność systemu stanowi
+					często miarę
+					jego jakości i określa, przez jaki czas system jest faktycznie dostępny, tzn. wykonuje swoje funkcje
+					w stosunku do
+					czasu, kiedy znajduje się w użytkowaniu. Odtwarzalność jest cechą systemu, określającą jego zdolność
+					do
+					przywrócenia stanu danych oraz operacji sprzed momentu, w którym nastąpiła awaria i przerwanie pracy
+					systemu.
+					Najprościej odtwarzalność systemu może zostać zweryfikowana poprzez wyłączenie zasilania w czasie,
+					kiedy system
 					wykonuje określone operacje, czy też sprawdzenie wykonania kopii zapasowych. </p>
 
-				<p><strong>Testowanie zabezpieczeń</strong> polega na sprawdzeniu, w jakim stopniu system jest chroniony przed
-					nieautoryzowanym dostępem do informacji i danych. W tym zakresie weryfikacji podlegają: poufność, integralność,
-					niezaprzeczalność, uwierzytelnianie oraz odpowiedzialność. Pod pojęciem poufności rozumiane jest umożliwienie
-					dostępu do określonych modułów systemu, funkcjonalności lub danych w nim zawartych wyłącznie uprawnionym osobom.
-					Weryfikacja integralności polega na sprawdzeniu, czy i w jakim stopniu, dane przetwarzane przez system są spójne i
-					dokładne oraz czy mogą zostać zmodyfikowane w sposób niezgodny z przyjętymi zasadami autoryzacji zmian.
-					Niezaprzeczalność związana jest z brakiem możliwości wyparcia się przez użytkownika realizacji określonych
-					operacji w systemie; może być ona osiągnięta poprzez logowanie wybranych funkcjonalności systemu lub szyfrowanie
-					operacji. Uwierzytelnienie to możliwość potwierdzenia tożsamości użytkownika systemu; jej testowanie polega na
-					sprawdzeniu, czy zastosowany w systemie schemat (np. wymóg podania loginu i hasła) działa zgodnie z założeniami.
-					Testowanie odpowiedzialności to weryfikacja, w jakim zakresie wykonane w systemie operacje i działania mogą być
+				<p><strong>Testowanie zabezpieczeń</strong> polega na sprawdzeniu, w jakim stopniu system jest chroniony
+					przed
+					nieautoryzowanym dostępem do informacji i danych. W tym zakresie weryfikacji podlegają: poufność,
+					integralność,
+					niezaprzeczalność, uwierzytelnianie oraz odpowiedzialność. Pod pojęciem poufności rozumiane jest
+					umożliwienie
+					dostępu do określonych modułów systemu, funkcjonalności lub danych w nim zawartych wyłącznie
+					uprawnionym osobom.
+					Weryfikacja integralności polega na sprawdzeniu, czy i w jakim stopniu, dane przetwarzane przez
+					system są spójne i
+					dokładne oraz czy mogą zostać zmodyfikowane w sposób niezgodny z przyjętymi zasadami autoryzacji
+					zmian.
+					Niezaprzeczalność związana jest z brakiem możliwości wyparcia się przez użytkownika realizacji
+					określonych
+					operacji w systemie; może być ona osiągnięta poprzez logowanie wybranych funkcjonalności systemu lub
+					szyfrowanie
+					operacji. Uwierzytelnienie to możliwość potwierdzenia tożsamości użytkownika systemu; jej testowanie
+					polega na
+					sprawdzeniu, czy zastosowany w systemie schemat (np. wymóg podania loginu i hasła) działa zgodnie z
+					założeniami.
+					Testowanie odpowiedzialności to weryfikacja, w jakim zakresie wykonane w systemie operacje i
+					działania mogą być
 					przypisane do użytkownika, który je zrealizował.</p>
 			</div>
 
@@ -308,16 +426,24 @@
 			</div>
 
 			<div class="opis">
-				<p><strong>Testowanie strukturalne</strong> to testowanie oparte na tzw. <i>technikach białoskrzynkowych</i>,
-					których celem jest sprawdzenie czy kod, tworzący oprogramowanie został w całości przetestowany, tj. czy został
-					pokryty przez testy. Ten rodzaj testowania nie sprawdza systemu pod kątem jego funkcjonalności, ale weryfikuje
-					logiczną poprawność jego struktury, stanowiąc uzupełnienie testów funkcjonalnych (czarnoskrzynkowych). Wykonanie
-					testów strukturalnych umożliwia weryfikację ścieżek działania modułu/systemu, wszystkich potencjalnych kombinacji
-					decyzji logicznych, wykonanie pętli oraz poprawność przyjętych struktur danych. Stosowane techniki białoskrzynkowe
-					wyodrębnia się ze względu na elementy kodu, podlegające testowaniu; poniżej opisane zostały główne z tych technik.</p>
+				<p><strong>Testowanie strukturalne</strong> to testowanie oparte na tzw. <i>technikach
+						białoskrzynkowych</i>,
+					których celem jest sprawdzenie czy kod, tworzący oprogramowanie został w całości przetestowany, tj.
+					czy został
+					pokryty przez testy. Ten rodzaj testowania nie sprawdza systemu pod kątem jego funkcjonalności, ale
+					weryfikuje
+					logiczną poprawność jego struktury, stanowiąc uzupełnienie testów funkcjonalnych
+					(czarnoskrzynkowych). Wykonanie
+					testów strukturalnych umożliwia weryfikację ścieżek działania modułu/systemu, wszystkich
+					potencjalnych kombinacji
+					decyzji logicznych, wykonanie pętli oraz poprawność przyjętych struktur danych. Stosowane techniki
+					białoskrzynkowe
+					wyodrębnia się ze względu na elementy kodu, podlegające testowaniu; poniżej opisane zostały główne z
+					tych technik.</p>
 
 				<table class="tabela2">
-					<caption align="bottom" style="text-align: left;">Techniki testowania strukturalnego, źródło: opracowanie własne
+					<caption align="bottom" style="text-align: left;">Techniki testowania strukturalnego, źródło:
+						opracowanie własne
 						na podstawie A.Roman <i>Testowanie i jakość oprogramowania</i>, PWN, Warszawa 2017</caption>
 					<thead>
 						<tr>
@@ -329,85 +455,118 @@
 					<tbody>
 						<tr>
 							<td class="nazwa2"><i>Testowanie instrukcji</i></td>
-							<td class="opis2">przedmiotem weryfikacji są instrukcje, rozumiane jako elementy kodu, będące jego najmniejszymi
-								i jednocześnie niepodzielnymi jednostkami wykonania. Z uwagi na fakt, że w hipotezie błędu zakłada się, że błąd
-								może wystąpić w każdej linii kodu, każda instrukcja musi zostać wykonana co najmniej raz. Ma to szczególne
-								znaczenie dla takich ścieżek działania programu, które charakteryzują się mniejszym prawdopodobieństwem
-								wykonania (tzn. nie są typowe), ponieważ mniejsza jest szansa na ich przetestowanie w trakcie testów
+							<td class="opis2">przedmiotem weryfikacji są instrukcje, rozumiane jako elementy kodu,
+								będące jego najmniejszymi
+								i jednocześnie niepodzielnymi jednostkami wykonania. Z uwagi na fakt, że w hipotezie
+								błędu zakłada się, że błąd
+								może wystąpić w każdej linii kodu, każda instrukcja musi zostać wykonana co najmniej
+								raz. Ma to szczególne
+								znaczenie dla takich ścieżek działania programu, które charakteryzują się mniejszym
+								prawdopodobieństwem
+								wykonania (tzn. nie są typowe), ponieważ mniejsza jest szansa na ich przetestowanie w
+								trakcie testów
 								integracyjnych, systemowych.</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie gałęzi</i></td>
-							<td class="opis2">oparte jest na grafie przepływu sterowania (ang. Control Flow Graph, CFG), czyli modelu, który
-								opisuje każdą możliwą sekwencję realizacji instrukcji kodu. Poszczególne instrukcje reprezentowane są przez
-								wierzchołki grafu, połączone krawędziami. Testowanie gałęzi polega na przetestowaniu wszystkich krawędzi grafu,
+							<td class="opis2">oparte jest na grafie przepływu sterowania (ang. Control Flow Graph, CFG),
+								czyli modelu, który
+								opisuje każdą możliwą sekwencję realizacji instrukcji kodu. Poszczególne instrukcje
+								reprezentowane są przez
+								wierzchołki grafu, połączone krawędziami. Testowanie gałęzi polega na przetestowaniu
+								wszystkich krawędzi grafu,
 								czyli sekwencji wykonania poszczególnych instrukcji;</td>
 						</tr>
 						<tr>
 							<td class="nazwa2"><i>Testowanie decyzji</i></td>
-							<td class="opis2">polega na przetestowaniu działania programu w sytuacji, gdy każdej instrukcji decyzyjnej
-								nadawana jest wartość logiczna prawdy oraz fałszu. Przyjęta hipoteza błędu zakłada, że nieprawidłowości
-								powstają wskutek niewłaściwego przepływu będącego skutkiem błędnej decyzji programu;</td>
+							<td class="opis2">polega na przetestowaniu działania programu w sytuacji, gdy każdej
+								instrukcji decyzyjnej
+								nadawana jest wartość logiczna prawdy oraz fałszu. Przyjęta hipoteza błędu zakłada, że
+								nieprawidłowości
+								powstają wskutek niewłaściwego przepływu będącego skutkiem błędnej decyzji programu;
+							</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie warunków</i></td>
-							<td class="opis2">ma miejsce w przypadkach decyzji w złożonych instrukcjach warunkowych, zawierających kilka
-								spójników logicznych. Założeniem tej techniki testowania jest przyjęcie co najmniej raz przez każdy z warunków
+							<td class="opis2">ma miejsce w przypadkach decyzji w złożonych instrukcjach warunkowych,
+								zawierających kilka
+								spójników logicznych. Założeniem tej techniki testowania jest przyjęcie co najmniej raz
+								przez każdy z warunków
 								wartości logicznej: prawda lub fałsz;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie warunków/decyzji</i></td>
-							<td class="opis2">stanowi zmodyfikowaną formę testowania warunków, jej zastosowanie zakłada oprócz pokrycia
-								warunków również pokrycie decyzji – oznacza to, że przynajmniej raz każdy z warunków oraz każda z decyzji
+							<td class="opis2">stanowi zmodyfikowaną formę testowania warunków, jej zastosowanie zakłada
+								oprócz pokrycia
+								warunków również pokrycie decyzji – oznacza to, że przynajmniej raz każdy z warunków
+								oraz każda z decyzji
 								przyjmuje wartość logiczną prawdy lub fałszu;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie warunków znaczących</i></td>
-							<td class="opis2">odnosi się do tych warunków, których zmiana wartości logicznej (prawda lub fałsz) powoduje
+							<td class="opis2">odnosi się do tych warunków, których zmiana wartości logicznej (prawda lub
+								fałsz) powoduje
 								zmianę wartości logicznej decyzji;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie pętli</i></td>
-							<td class="opis2">przyjmuje się, że zawarte w kodzie programu pętle powinny zostać wykonane w trakcie testu
-								dokładnie raz; testowanie pętli ma co do zasady charakter negatywny, tzn. polega na próbie wywołania iteracji
-								dla nieprawidłowej ich liczby, np. wartości ujemnych czy przekraczających przyjęte maksimum. W literaturze
-								podkreśla się, że właściwe przetestowanie pętli powinno opierać się na wartościach brzegowych do liczby pętli;</td>
+							<td class="opis2">przyjmuje się, że zawarte w kodzie programu pętle powinny zostać wykonane
+								w trakcie testu
+								dokładnie raz; testowanie pętli ma co do zasady charakter negatywny, tzn. polega na
+								próbie wywołania iteracji
+								dla nieprawidłowej ich liczby, np. wartości ujemnych czy przekraczających przyjęte
+								maksimum. W literaturze
+								podkreśla się, że właściwe przetestowanie pętli powinno opierać się na wartościach
+								brzegowych do liczby pętli;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Liniowa sekwencja kodu i skok</i></td>
-							<td class="opis2">przy zastosowaniu tej techniki testowane jest działanie programu w sytuacji, gdy po
-								sekwencyjnym wykonaniu linii wybranego fragmentu kodu następuje skok w inną, niż kolejna, linię kodu. Hipoteza
-								błędu polega na założeniu wystąpienia nieprawidłowości w działaniu programu, spowodowanych skokami, czyli
+							<td class="opis2">przy zastosowaniu tej techniki testowane jest działanie programu w
+								sytuacji, gdy po
+								sekwencyjnym wykonaniu linii wybranego fragmentu kodu następuje skok w inną, niż
+								kolejna, linię kodu. Hipoteza
+								błędu polega na założeniu wystąpienia nieprawidłowości w działaniu programu,
+								spowodowanych skokami, czyli
 								brakiem sekwencyjnej realizacji kodu;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Analiza ścieżek</i></td>
-							<td class="opis2">testowanie polegające na weryfikacji sekwencji zdarzeń mogących wystąpić podczas działania
-								systemu, przy czym testowaniu podlegają wszystkie możliwe sekwencje zdarzeń (ścieżki). Jeżeli podczas
-								stosowania tej techniki stwierdzony zostanie błąd, będzie to oznaczało, że został on spowodowany nieprawidłową
+							<td class="opis2">testowanie polegające na weryfikacji sekwencji zdarzeń mogących wystąpić
+								podczas działania
+								systemu, przy czym testowaniu podlegają wszystkie możliwe sekwencje zdarzeń (ścieżki).
+								Jeżeli podczas
+								stosowania tej techniki stwierdzony zostanie błąd, będzie to oznaczało, że został on
+								spowodowany nieprawidłową
 								sekwencją zdarzeń;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie przepływu danych</i></td>
-							<td class="opis2">jego celem jest potwierdzenie prawidłowego przepływu wartości zmiennych od momentu jej
-								deklaracji i inicjalizacji w jednym punkcie programu poprzez przetworzenie (użycie) wartości zmiennej w innym
-								punkcie programu. Hipoteza błędu zakłada wystąpienie błędu obliczeń z wykorzystaniem zmiennych;</td>
+							<td class="opis2">jego celem jest potwierdzenie prawidłowego przepływu wartości zmiennych od
+								momentu jej
+								deklaracji i inicjalizacji w jednym punkcie programu poprzez przetworzenie (użycie)
+								wartości zmiennej w innym
+								punkcie programu. Hipoteza błędu zakłada wystąpienie błędu obliczeń z wykorzystaniem
+								zmiennych;</td>
 						</tr>
 
 						<tr>
 							<td class="nazwa2"><i>Testowanie mutacyjne</i></td>
-							<td class="opis2">polega na zmianie kodu źródłowego, czyli jego tzw. mutacji w celu sprawdzenia, czy opracowane
-								przypadki testowe wykryją błędy w kodzie. Mutacja dokonywana jest za pomocą tzw. operatorów mutacyjnych i
-								stanowi odwzorowanie błędu, który mógł zostać popełniony podczas pisania kodu. Technika ta pozwala na
-								sprawdzenie jakości przeprowadzonych testów oraz zweryfikowaniu, czy pozwalają one na wykrycie różnych typów
+							<td class="opis2">polega na zmianie kodu źródłowego, czyli jego tzw. mutacji w celu
+								sprawdzenia, czy opracowane
+								przypadki testowe wykryją błędy w kodzie. Mutacja dokonywana jest za pomocą tzw.
+								operatorów mutacyjnych i
+								stanowi odwzorowanie błędu, który mógł zostać popełniony podczas pisania kodu. Technika
+								ta pozwala na
+								sprawdzenie jakości przeprowadzonych testów oraz zweryfikowaniu, czy pozwalają one na
+								wykrycie różnych typów
 								błędów.</td>
 						</tr>
 					</tbody>
@@ -420,15 +579,24 @@
 			</div>
 
 			<div class="opis">
-				<p>Wprowadzenie do systemu zmian wskutek stwierdzonych niezgodności i błędów wymaga ponownego przeprowadzenia
-					testów. Mają one na celu sprawdzenie nie tylko, czy dokonane w kodzie źródłowym zmiany pozwalają na prawidłowe
-					działanie systemu, ale ich zadaniem jest również zweryfikowanie, czy zmiany te nie spowodowały innych błędów w
-					pracy systemu. Testy związane ze zmianą obejmują dwa typy testowania: potwierdzające oraz regresywne. <strong>Testowanie
-						potwierdzające</strong>, określane inaczej <strong>retestami</strong>, ukierunkowane jest na potwierdzenie
-					usunięcia błędu i przeprowadzone jest za pomocą tych samych przypadków testowych, które w wyniku poprzedniego
-					testowania wykryły naprawione błędy. Podczas testowania związanego ze zmianą, retesty wykonywane są w pierwszej
-					kolejności, przed testami regresji. Z kolei wykonanie <strong>testów regresyjnych</strong> pozwala na
-					potwierdzenie braku powstania nowych błędów w wyniku wprowadzonej zmiany. Testowanie regresywne ma zazwyczaj
+				<p>Wprowadzenie do systemu zmian wskutek stwierdzonych niezgodności i błędów wymaga ponownego
+					przeprowadzenia
+					testów. Mają one na celu sprawdzenie nie tylko, czy dokonane w kodzie źródłowym zmiany pozwalają na
+					prawidłowe
+					działanie systemu, ale ich zadaniem jest również zweryfikowanie, czy zmiany te nie spowodowały
+					innych błędów w
+					pracy systemu. Testy związane ze zmianą obejmują dwa typy testowania: potwierdzające oraz
+					regresywne. <strong>Testowanie
+						potwierdzające</strong>, określane inaczej <strong>retestami</strong>, ukierunkowane jest na
+					potwierdzenie
+					usunięcia błędu i przeprowadzone jest za pomocą tych samych przypadków testowych, które w wyniku
+					poprzedniego
+					testowania wykryły naprawione błędy. Podczas testowania związanego ze zmianą, retesty wykonywane są
+					w pierwszej
+					kolejności, przed testami regresji. Z kolei wykonanie <strong>testów regresyjnych</strong> pozwala
+					na
+					potwierdzenie braku powstania nowych błędów w wyniku wprowadzonej zmiany. Testowanie regresywne ma
+					zazwyczaj
 					charakter automatyczny. </p>
 			</div>
 

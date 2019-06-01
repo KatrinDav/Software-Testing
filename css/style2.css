@@ -158,10 +158,8 @@ h1 {
 	margin-left: auto;
 	margin-top: 70px;
 	text-align: justify;
-	/*font-family: 'Karma', serif;*/
-	/*font-family: 'Libre Baskerville', serif;*/
 	font-size: 1em;
-	/*font-family: Arial, sans-serif;*/
+
 
 }
 
@@ -434,6 +432,14 @@ table .opis2 {
 		content: '\A';
 		white-space: pre;
 
+	}
+
+	.opis {
+		width: 90%;
+	}
+
+	.ikonka {
+		padding-top: 50px;
 	}
 
 
